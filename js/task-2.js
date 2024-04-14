@@ -25,10 +25,14 @@ const images = [
   }
 ];
 
-images.forEach(image => {
-  const imageTag = `<img class = "gallery-image" src="${image.url}" alt="${image.alt}"/>`
-  const imagesList = document.querySelector("ul");
-  imagesList.insertAdjacentHTML("beforeend", imageTag);
+// images.forEach(image => {
+//   const imageTag = `<img class = "gallery-image" src="${image.url}" alt="${image.alt}"/>`
+//   const imagesList = document.querySelector("ul");
+//   imagesList.insertAdjacentHTML("beforeend", imageTag);
   
-})
+// })
+
+const imagesList = document.querySelector("ul");
+const galleryImages = images.map(image => `<img class="gallery-image" src="${image.url}" alt="${image.alt}"/>`).join("");
+imagesList.insertAdjacentHTML("beforeend", galleryImages);
 
