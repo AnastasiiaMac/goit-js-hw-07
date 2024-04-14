@@ -52,7 +52,7 @@ p {
   border-radius: 8px;
   background: #F6F6FE;
   width: 392px;
-  height: 312px;
+  height: auto;
 }
 
 .item li {
